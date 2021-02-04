@@ -12,12 +12,25 @@ class SwiftRobotControlCenter: RobotControlCenter {
     
     //  Level name setup
     override func viewDidLoad() {
-        levelName = "L0C" //  Level name
+        levelName = "L4H" //  Level name
         super.viewDidLoad()
     }
 	
 	override func run() {
 		
 	}
+    
+    
+    
+    func turnLeft() {
+        for _ in 0..<3{
+            turnRight()
+        }
+    }
+    
+    func doubleMove() {
+        move()
+        move()
+    }
     
 }
