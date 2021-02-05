@@ -17,9 +17,55 @@ class SwiftRobotControlCenter: RobotControlCenter {
     }
 	
 	override func run() {
-		
+       
 	}
     
+    
+    
+    
+//    func createX() {
+//        while frontIsClear {
+//            put()
+//            move()
+//            turnRight()
+//            move()
+//            if frontIsBlocked, noCandyPresent {
+//                put()
+//                break
+//            }
+//            turnLeft()
+//        }
+//    }
+//
+//    func turnToNext() {
+//        while facingDown {
+//            turnRight()
+//            turnRight()
+//        }
+//        while frontIsClear {
+//            move()
+//            if frontIsBlocked {
+//                break
+//            }
+//        }
+//    }
+//
+//    func createX2() {
+//        if frontIsBlocked {
+//            turnLeft()
+//        }
+//        while frontIsClear {
+//            put()
+//            move()
+//            turnLeft()
+//            move()
+//            turnRight()
+//            if frontIsBlocked, noCandyPresent {
+//                put()
+//                break
+//            }
+//        }
+//    }
     
     
     func turnLeft() {
