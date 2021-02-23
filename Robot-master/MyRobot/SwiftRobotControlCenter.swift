@@ -17,10 +17,80 @@ class SwiftRobotControlCenter: RobotControlCenter {
     }
 	
 	override func run() {
-       
+        for _ in 0...13 {
+            firstStep()
+            secondStep()
+            thirdStep()
+            atHeadisCandy()
+            backToStart()
+        }
 	}
     
+    func firstStep() {
+        if noCandyPresent {
+            turnRight()
+            move()
+            turnLeft()
+        }
+    }
     
+    func secondStep() {
+        while noCandyPresent {
+            put()
+        }
+    }
+    
+    func thirdStep() {
+        if candyPresent {
+            move()
+        }
+    }
+    
+    func atHeadisCandy() {
+        if noCandyPresent {
+            turnLeft()
+            move()
+        }
+        if noCandyPresent {
+            turnRight()
+            turnRight()
+            move()
+            turnRight()
+        }
+    }
+    
+    func backToStart() {
+        while frontIsClear {
+            move()
+        }
+    }
+    
+//    var candy: Int = 0
+//
+//    func isCandyHere() {
+//        if candy == 0 {
+//            nextStep()
+//        }
+//    }
+//
+//    func nextStep() {
+//        turnRight()
+//        move()
+//        turnLeft()
+//    }
+//
+//    func putCandy() {
+//        if noCandyPresent {
+//            candy += 1
+//            put()
+//        }
+//    }
+//
+//    func doSomething() {
+//        while candy != 13 {
+//            putCandy()
+//        }
+//    }
     
     
     func turnLeft() {
